@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Likhitha's Bakery</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ===========================
+           GALLERY PAGE
+        =========================== */
+
+        .gallery-page {
+            padding: 140px 8% 80px;
+            background: #fff8f5;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-title h1 {
+            font-size: 50px;
+            color: #8e2de2;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+            color: #666;
+        }
+
+
+        /* ===========================
+           GALLERY GRID
+        =========================== */
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+
+            height: 300px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: white;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+            cursor: pointer;
+        }
+
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+
+        /* ===========================
+           IMAGE OVERLAY
+        =========================== */
+
+        .gallery-overlay {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            padding: 25px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,.8)
+                );
+
+            transform: translateY(100%);
+
+            transition: .4s;
+        }
+
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+
+        .gallery-overlay h3 {
+            font-size: 22px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .gallery-overlay p {
+            font-size: 14px;
+        }
+
+
+        /* ===========================
+           CATEGORY TITLE
+        =========================== */
+
+        .gallery-category {
+            max-width: 1200px;
+
+            margin: 70px auto 30px;
+
+            text-align: center;
+        }
+
+
+        .gallery-category h2 {
+            font-size: 38px;
+
+            color: #8e2de2;
+
+            margin-bottom: 10px;
+        }
+
+
+        .gallery-category p {
+            color: #666;
+        }
+
+
+        /* ===========================
+           FEATURED SECTION
+        =========================== */
+
+        .gallery-featured {
+            max-width: 1200px;
+
+            margin: 80px auto 0;
+
+            padding: 55px 30px;
+
+            text-align: center;
+
+            color: white;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #8e2de2,
+                    #ff4081
+                );
+        }
+
+
+        .gallery-featured h2 {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .gallery-featured p {
+            max-width: 800px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+        }
+
+
+        .gallery-featured .btn {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 12px 28px;
+
+            border-radius: 25px;
+
+            background: white;
+
+            color: #8e2de2;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+
+        .gallery-featured .btn:hover {
+            transform: translateY(-4px);
+
+            background: #fff0f7;
+        }
+
+
+        /* ===========================
+           FOOTER
+        =========================== */
+
+        footer {
+            width: 100%;
+
+            text-align: center;
+
+            padding: 50px 20px 30px;
+
+            background: #24102f;
+
+            color: white;
+        }
+
+
+        footer h2 {
+            margin-bottom: 15px;
+
+            font-size: 28px;
+        }
+
+
+        footer p {
+            margin: 10px 0;
+
+            line-height: 1.7;
+        }
+
+
+        .social {
+            margin: 20px 0;
+        }
+
+
+        .social i {
+            margin: 0 10px;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+
+        .social i:hover {
+            color: #ff4081;
+
+            transform: translateY(-5px);
+        }
+
+
+        /* ===========================
+           TABLET
+        =========================== */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-title h1 {
+                font-size: 42px;
+            }
+
+        }
+
+
+        /* ===========================
+           MOBILE
+        =========================== */
+
+        @media (max-width: 600px) {
+
+            .gallery-page {
+                padding: 100px 5% 60px;
+            }
+
+            .page-title h1 {
+                font-size: 36px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            .gallery-category h2 {
+                font-size: 30px;
+            }
+
+            .gallery-featured {
+                padding: 45px 20px;
+            }
+
+            .gallery-featured h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <img src="images/logo.png"
+                alt="Likhitha's Bakery Logo">
+
+            <span>Likhitha's Bakery</span>
+
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="cakes.html">Cakes</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= GALLERY PAGE ================= -->
+
+    <main class="gallery-page">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h1>Our Bakery Gallery</h1>
+
+            <p>
+                A glimpse of our delicious creations and
+                beautiful celebrations.
+            </p>
+
+        </div>
+
+
+        <!-- ================= CAKES ================= -->
+
+        <div class="gallery-category">
+
+            <h2>Our Cakes 🎂</h2>
+
+            <p>
+                Beautiful cakes made for beautiful moments.
+            </p>
+
+        </div>
+
+
+        <section class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img src="images/cake1.jpg"
+                    alt="Chocolate Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>Rich, creamy and delicious.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/cake2.jpg"
+                    alt="Red Velvet Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Red Velvet Cake</h3>
+
+                    <p>Soft and beautifully decorated.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/blackforest.jpg"
+                    alt="Black Forest Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Black Forest Cake</h3>
+
+                    <p>Chocolate, cream and cherries.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/butterscotch.jpg"
+                    alt="Butterscotch Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Butterscotch Cake</h3>
+
+                    <p>A delicious crunchy delight.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/strawberry.jpg"
+                    alt="Strawberry Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Strawberry Cake</h3>
+
+                    <p>Fresh and fruity sweetness.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/vanilla.jpg"
+                    alt="Vanilla Cake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Vanilla Cake</h3>
+
+                    <p>Light, soft and creamy.</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= CUPCAKES ================= -->
+
+        <div class="gallery-category">
+
+            <h2>Sweet Treats 🧁</h2>
+
+            <p>
+                Small treats with big flavors.
+            </p>
+
+        </div>
+
+
+        <section class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img src="images/cupcake.jpg"
+                    alt="Chocolate Cupcake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Chocolate Cupcakes</h3>
+
+                    <p>Perfect little chocolate treats.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/cupcake2.jpg"
+                    alt="Vanilla Cupcake">
+
+                <div class="gallery-overlay">
+
+                    <h3>Vanilla Cupcakes</h3>
+
+                    <p>Soft cupcakes with creamy frosting.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/pastry.jpg"
+                    alt="Fresh Pastry">
+
+                <div class="gallery-overlay">
+
+                    <h3>Fresh Pastries</h3>
+
+                    <p>Freshly baked every day.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/cookies.jpg"
+                    alt="Chocolate Cookies">
+
+                <div class="gallery-overlay">
+
+                    <h3>Chocolate Cookies</h3>
+
+                    <p>Crispy and filled with chocolate.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/donut.jpg"
+                    alt="Chocolate Donut">
+
+                <div class="gallery-overlay">
+
+                    <h3>Chocolate Donuts</h3>
+
+                    <p>Soft donuts with chocolate glaze.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/donut2.jpg"
+                    alt="Strawberry Donut">
+
+                <div class="gallery-overlay">
+
+                    <h3>Strawberry Donuts</h3>
+
+                    <p>Sweet donuts with strawberry glaze.</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= FEATURED ================= -->
+
+        <section class="gallery-featured">
+
+            <h2>Made For Your Special Moments ❤️</h2>
+
+            <p>
+                From birthdays and anniversaries to weddings
+                and family celebrations, Likhitha's Bakery
+                is happy to add a little sweetness to every
+                occasion.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Order Your Cake
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>Likhitha's Bakery</h2>
+
+        <p>
+            Freshly Baked. Lovingly Made.
+        </p>
+
+
+        <div class="social">
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-youtube"></i>
+
+            <i class="fab fa-whatsapp"></i>
+
+        </div>
+
+
+        <p>
+            © 2026 Likhitha's Bakery | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

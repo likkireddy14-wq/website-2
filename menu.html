@@ -1,0 +1,631 @@
+``html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Likhitha's Bakery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <img src="images/logo.png.png" alt="Likhitha's Bakery Logo">
+
+    </a>
+
+    <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="menu.html" class="active">Menu</a>
+
+        <a href="specials.html">Specials</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <a href="contact.html" class="order-nav">
+
+        Order Now
+
+    </a>
+
+    <button class="menu-icon" onclick="toggleMenu()">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <div>
+
+        <p class="section-label">
+            OUR MENU
+        </p>
+
+        <h1>
+
+            Fresh From The
+            <span>Oven</span>
+
+        </h1>
+
+        <p>
+
+            Delicious treats baked fresh with love
+            for every occasion.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU INTRO ================= -->
+
+<section class="menu-intro">
+
+    <p class="section-label">
+        TASTE THE DIFFERENCE
+    </p>
+
+    <h2>
+
+        Something Sweet For
+        <span>Everyone</span>
+
+    </h2>
+
+    <p>
+
+        From celebration cakes to freshly baked
+        cookies, discover something delicious
+        at Likhitha's Bakery.
+
+    </p>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products menu-products">
+
+    <div class="product-grid">
+
+
+        <!-- CAKE 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85"
+                    alt="Chocolate Dream Cake">
+
+                <span class="tag">
+                    Bestseller
+                </span>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Chocolate Dream Cake
+                </h3>
+
+                <p>
+
+                    Rich chocolate sponge layered with
+                    creamy chocolate frosting.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹499
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAKE 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=700&q=85"
+                    alt="Strawberry Cake">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Strawberry Delight
+                </h3>
+
+                <p>
+
+                    Soft vanilla sponge with fresh
+                    strawberries and cream.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹549
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAKE 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=85"
+                    alt="Glazed Donuts">
+
+                <span class="tag">
+                    Popular
+                </span>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Glazed Donuts
+                </h3>
+
+                <p>
+
+                    Soft, fluffy donuts covered
+                    with a delicious sweet glaze.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹199
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=85"
+                    alt="Vanilla Cupcakes">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Vanilla Cupcakes
+                </h3>
+
+                <p>
+
+                    Fluffy vanilla cupcakes topped
+                    with smooth creamy frosting.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹299
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85"
+                    alt="Butter Croissant">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Butter Croissant
+                </h3>
+
+                <p>
+
+                    Golden, flaky and buttery croissants
+                    baked fresh every morning.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹149
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=85"
+                    alt="Chocolate Cookies">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Chocolate Cookies
+                </h3>
+
+                <p>
+
+                    Buttery cookies loaded with
+                    delicious chocolate chips.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹179
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=700&q=85"
+                    alt="Red Velvet Cake">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Red Velvet Cake
+                </h3>
+
+                <p>
+
+                    Soft red velvet cake with
+                    delicious cream cheese frosting.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹599
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/cake1.png"
+                    alt="Birthday Cake">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    Birthday Celebration Cake
+                </h3>
+
+                <p>
+
+                    Beautifully decorated cake made
+                    specially for celebrations.
+
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹699
+                    </strong>
+
+                    <a href="contact.html"
+                       class="small-order-btn">
+
+                        Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CUSTOM CAKE ================= -->
+
+<section class="special custom-cake-section">
+
+    <div class="special-content">
+
+        <p class="section-label">
+            CUSTOM CAKES
+        </p>
+
+        <h2>
+
+            Your Dream Cake,
+            <span>Our Creation</span>
+
+        </h2>
+
+        <p>
+
+            Have a special design in mind?
+            Tell us what you want and we'll create
+            a cake especially for you.
+
+        </p>
+
+        <a href="contact.html" class="btn primary-btn">
+
+            Request A Custom Cake
+
+            <i class="fa-solid fa-cake-candles"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="special-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=900&q=85"
+            alt="Custom Cake">
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img
+            src="images/logo.png.png"
+            alt="Likhitha's Bakery Logo">
+
+        <p>
+
+            Baked with love.
+            Served with happiness.
+
+        </p>
+
+    </div>
+
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 Likhitha's Bakery.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

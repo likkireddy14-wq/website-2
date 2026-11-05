@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Likhitha's Bakery | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <img src="images/logo.png.png" alt="Likhitha's Bakery Logo">
+
+    </a>
+
+    <nav id="mainNav">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="specials.html">Specials</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <a href="contact.html" class="order-nav">
+        Order Now
+    </a>
+
+    <button class="menu-icon" onclick="toggleMenu()">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="welcome">
+            WELCOME TO LIKHITHA'S BAKERY
+        </p>
+
+        <h1>
+
+            Baked With
+            <span>Love</span>
+
+        </h1>
+
+        <p class="hero-text">
+
+            Freshly baked cakes, delicious pastries and sweet
+            moments made specially for you.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="menu.html" class="btn primary-btn">
+
+                Explore Menu
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <a href="about.html" class="btn secondary-btn">
+
+                Our Story
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="circle-bg"></div>
+
+        <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+            alt="Chocolate Cake">
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-wheat-awn"></i>
+
+        <div>
+
+            <h3>Fresh Ingredients</h3>
+
+            <p>Only quality ingredients</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-heart"></i>
+
+        <div>
+
+            <h3>Made With Love</h3>
+
+            <p>Freshly baked every day</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>Sweetness at your doorstep</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-box">
+
+        <i class="fa-solid fa-star"></i>
+
+        <div>
+
+            <h3>Best Quality</h3>
+
+            <p>Taste you will remember</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK INTRO ================= -->
+
+<section class="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1559622214-f8a9850965bb?auto=format&fit=crop&w=900&q=85"
+            alt="Bakery">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p class="section-label">
+            OUR STORY
+        </p>
+
+        <h2>
+
+            A Little Piece Of
+            <span>Happiness</span>
+
+        </h2>
+
+        <p>
+
+            At Likhitha's Bakery, every treat is made with
+            passion, creativity and a whole lot of love.
+
+        </p>
+
+        <p>
+
+            We create delicious cakes, pastries and baked
+            goodies for all your special moments.
+
+        </p>
+
+        <a href="about.html" class="btn primary-btn">
+
+            Read Our Story
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU PREVIEW ================= -->
+
+<section class="products">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            OUR MENU
+        </p>
+
+        <h2>
+
+            Fresh From The
+            <span>Oven</span>
+
+        </h2>
+
+        <p>
+            Discover our delicious collection of bakery favourites.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85"
+                    alt="Chocolate Cake">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Chocolate Dream Cake
+                </h3>
+
+                <p>
+                    Rich chocolate cake with creamy frosting.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹499</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=700&q=85"
+                    alt="Strawberry Cake">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Strawberry Delight
+                </h3>
+
+                <p>
+                    Soft vanilla cake with fresh strawberries.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹549</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=85"
+                    alt="Cupcakes">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Vanilla Cupcakes
+                </h3>
+
+                <p>
+                    Soft and fluffy cupcakes with delicious cream.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹299</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="menu.html" class="btn primary-btn">
+
+            View Full Menu
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SPECIAL ================= -->
+
+<section class="special">
+
+    <div class="special-content">
+
+        <p class="section-label">
+            TODAY'S SPECIAL
+        </p>
+
+        <h2>
+
+            Sweeten Your
+            <span>Celebrations</span>
+
+        </h2>
+
+        <p>
+
+            Order a custom cake for birthdays,
+            anniversaries, weddings and every special moment.
+
+        </p>
+
+        <a href="specials.html" class="btn primary-btn">
+
+            See Our Specials
+
+            <i class="fa-solid fa-cake-candles"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="special-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=85"
+            alt="Celebration Cake">
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img
+            src="images/logo.png.png"
+            alt="Likhitha's Bakery Logo">
+
+        <p>
+            Baked with love. Served with happiness.
+        </p>
+
+    </div>
+
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 Likhitha's Bakery.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

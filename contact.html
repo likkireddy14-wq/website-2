@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact & Order | Likhitha's Bakery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/logo.png.png"
+                alt="Likhitha's Bakery Logo">
+
+        </a>
+
+
+        <nav id="mainNav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="specials.html">
+                Specials
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="order-nav">
+            Order Now
+        </a>
+
+
+        <button
+            class="menu-icon"
+            onclick="toggleMenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                Let's Make Something
+                <span>Sweet</span>
+            </h1>
+
+            <p>
+                Have a question or want to place an order?
+                We'd love to hear from you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact contact-page">
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-content">
+
+            <p class="section-label">
+                CONTACT US
+            </p>
+
+            <h2>
+                We'd Love To
+                <span>Hear From You</span>
+            </h2>
+
+            <p>
+                Whether you're planning a birthday,
+                wedding, anniversary or simply craving
+                something sweet, contact Likhitha's Bakery.
+            </p>
+
+
+            <!-- PHONE -->
+
+            <div class="contact-details">
+
+                <div>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        hello@likhithasbakery.com
+                    </span>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Kurnool, Andhra Pradesh
+                    </span>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Mon - Sun : 9:00 AM - 9:00 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SOCIAL -->
+
+            <div class="contact-social">
+
+                <p>
+                    Follow us:
+                </p>
+
+                <div class="social-icons contact-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE FORM -->
+
+        <form
+            class="contact-form"
+            onsubmit="placeOrder(event)">
+
+            <h3>
+                Place Your Order
+            </h3>
+
+            <p class="form-description">
+                Fill in the details below and
+                we'll get back to you.
+            </p>
+
+
+            <!-- NAME -->
+
+            <label>
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required>
+
+
+
+            <!-- PHONE -->
+
+            <label>
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                placeholder="Enter your phone number"
+                required>
+
+
+
+            <!-- EMAIL -->
+
+            <label>
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required>
+
+
+
+            <!-- PRODUCT -->
+
+            <label>
+                What would you like?
+            </label>
+
+            <select required>
+
+                <option value="">
+                    Select an item
+                </option>
+
+                <option>
+                    Chocolate Dream Cake
+                </option>
+
+                <option>
+                    Strawberry Delight
+                </option>
+
+                <option>
+                    Vanilla Cupcakes
+                </option>
+
+                <option>
+                    Glazed Donuts
+                </option>
+
+                <option>
+                    Butter Croissant
+                </option>
+
+                <option>
+                    Chocolate Cookies
+                </option>
+
+                <option>
+                    Birthday Cake
+                </option>
+
+                <option>
+                    Wedding Cake
+                </option>
+
+                <option>
+                    Anniversary Cake
+                </option>
+
+                <option>
+                    Custom Cake
+                </option>
+
+            </select>
+
+
+
+            <!-- DATE -->
+
+            <label>
+                Required Date
+            </label>
+
+            <input
+                type="date"
+                required>
+
+
+
+            <!-- MESSAGE -->
+
+            <label>
+                Additional Details
+            </label>
+
+            <textarea
+                rows="5"
+                placeholder="Tell us about your order..."
+                required></textarea>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="btn primary-btn">
+
+                Place Order
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ================= MAP / LOCATION ================= -->
+
+    <section class="location-section">
+
+        <div class="location-content">
+
+            <p class="section-label">
+                VISIT US
+            </p>
+
+            <h2>
+                Come Say
+                <span>Hello</span>
+            </h2>
+
+            <p>
+                We'd love to welcome you to
+                Likhitha's Bakery.
+            </p>
+
+
+            <div class="location-box">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <strong>
+                        Likhitha's Bakery
+                    </strong>
+
+                    <span>
+                        Kurnool, Andhra Pradesh
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="map-box">
+
+            <i class="fa-solid fa-map-location-dot"></i>
+
+            <p>
+                Likhitha's Bakery
+            </p>
+
+            <span>
+                Kurnool, Andhra Pradesh
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="images/logo.png.png"
+                alt="Likhitha's Bakery Logo">
+
+            <p>
+                Baked with love.
+                Served with happiness.
+            </p>
+
+        </div>
+
+
+
+        <div class="social-icons">
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+
+
+        <p class="copyright">
+
+            © 2026 Likhitha's Bakery.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

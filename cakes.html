@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cakes | Likhitha's Bakery</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ===========================
+           CAKES PAGE
+        =========================== */
+
+        .cakes-page {
+            padding: 140px 8% 80px;
+            background: #fff8f5;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-title h1 {
+            font-size: 50px;
+            color: #8e2de2;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+            color: #666;
+        }
+
+
+        /* ===========================
+           CAKE CARDS
+        =========================== */
+
+        .cake-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .cake-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+
+            transition: .4s;
+
+            text-align: center;
+        }
+
+        .cake-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(142,45,226,.25);
+        }
+
+
+        .cake-image {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .cake-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .4s;
+        }
+
+        .cake-card:hover .cake-image img {
+            transform: scale(1.08);
+        }
+
+
+        .cake-content {
+            padding: 25px;
+        }
+
+        .cake-content i {
+            font-size: 32px;
+            color: #ff4081;
+            margin-bottom: 12px;
+        }
+
+        .cake-content h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .cake-content p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+
+        .cake-price {
+            font-size: 20px;
+            font-weight: 600;
+            color: #8e2de2;
+        }
+
+
+        /* ===========================
+           ORDER BUTTON
+        =========================== */
+
+        .cake-btn {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 11px 28px;
+
+            border-radius: 25px;
+
+            background: #ff4081;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .cake-btn:hover {
+            background: #8e2de2;
+            transform: translateY(-4px);
+        }
+
+
+        /* ===========================
+           CUSTOM CAKE SECTION
+        =========================== */
+
+        .custom-cake {
+            max-width: 1200px;
+
+            margin: 80px auto 0;
+
+            padding: 60px 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #8e2de2,
+                    #ff4081
+                );
+        }
+
+        .custom-cake h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .custom-cake p {
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .custom-cake .btn {
+            background: white;
+            color: #8e2de2;
+        }
+
+
+        /* ===========================
+           CAKE OCCASIONS
+        =========================== */
+
+        .occasions {
+            padding: 80px 0 0;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .occasions h2 {
+            text-align: center;
+
+            font-size: 40px;
+
+            color: #8e2de2;
+
+            margin-bottom: 40px;
+        }
+
+
+        .occasion-container {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .occasion {
+            background: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+
+            transition: .4s;
+        }
+
+
+        .occasion:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .occasion i {
+            font-size: 40px;
+
+            color: #ff4081;
+
+            margin-bottom: 15px;
+        }
+
+
+        .occasion h3 {
+            margin-bottom: 10px;
+        }
+
+
+        .occasion p {
+            line-height: 1.6;
+
+            color: #666;
+        }
+
+
+        /* ===========================
+           FOOTER
+        =========================== */
+
+        footer {
+            width: 100%;
+
+            text-align: center;
+
+            padding: 50px 20px 30px;
+
+            background: #24102f;
+
+            color: white;
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+
+            font-size: 28px;
+        }
+
+        footer p {
+            margin: 10px 0;
+
+            line-height: 1.7;
+        }
+
+
+        .social {
+            margin: 20px 0;
+        }
+
+
+        .social i {
+            margin: 0 10px;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+
+        .social i:hover {
+            color: #ff4081;
+
+            transform: translateY(-5px);
+        }
+
+
+        /* ===========================
+           TABLET
+        =========================== */
+
+        @media (max-width: 900px) {
+
+            .cake-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .occasion-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* ===========================
+           MOBILE
+        =========================== */
+
+        @media (max-width: 600px) {
+
+            .cakes-page {
+                padding: 100px 5% 60px;
+            }
+
+            .page-title h1 {
+                font-size: 36px;
+            }
+
+            .cake-container {
+                grid-template-columns: 1fr;
+
+                width: 100%;
+            }
+
+            .occasion-container {
+                grid-template-columns: 1fr;
+            }
+
+            .occasions h2 {
+                font-size: 32px;
+            }
+
+            .custom-cake {
+                padding: 45px 20px;
+            }
+
+            .custom-cake h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <img src="images/logo.png"
+                alt="Likhitha's Bakery Logo">
+
+            <span>Likhitha's Bakery</span>
+
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="cakes.html">Cakes</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= CAKES PAGE ================= -->
+
+    <main class="cakes-page">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h1>Our Special Cakes</h1>
+
+            <p>
+                Beautiful cakes for your sweetest celebrations.
+            </p>
+
+        </div>
+
+
+        <!-- ================= CAKE COLLECTION ================= -->
+
+        <section class="cake-container">
+
+
+            <!-- CHOCOLATE -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/cake1.jpg"
+                        alt="Chocolate Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-cake-candles"></i>
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>
+                        Rich chocolate sponge with creamy
+                        chocolate frosting.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹499
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RED VELVET -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/cake2.jpg"
+                        alt="Red Velvet Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-heart"></i>
+
+                    <h3>Red Velvet Cake</h3>
+
+                    <p>
+                        Soft red velvet layers with smooth
+                        cream cheese frosting.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹599
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BLACK FOREST -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/blackforest.jpg"
+                        alt="Black Forest Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-birthday-cake"></i>
+
+                    <h3>Black Forest Cake</h3>
+
+                    <p>
+                        Delicious chocolate cake with
+                        fresh cream and cherries.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹549
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTERSCOTCH -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/butterscotch.jpg"
+                        alt="Butterscotch Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-star"></i>
+
+                    <h3>Butterscotch Cake</h3>
+
+                    <p>
+                        Soft vanilla sponge with rich
+                        butterscotch cream and nuts.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹549
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- STRAWBERRY -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/strawberry.jpg"
+                        alt="Strawberry Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-strawberry"></i>
+
+                    <h3>Strawberry Cake</h3>
+
+                    <p>
+                        Soft cake layers with fresh
+                        strawberry cream.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹579
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- VANILLA -->
+
+            <div class="cake-card">
+
+                <div class="cake-image">
+
+                    <img src="images/vanilla.jpg"
+                        alt="Vanilla Cake">
+
+                </div>
+
+                <div class="cake-content">
+
+                    <i class="fas fa-star"></i>
+
+                    <h3>Vanilla Cake</h3>
+
+                    <p>
+                        Light and fluffy vanilla cake
+                        with creamy frosting.
+                    </p>
+
+                    <span class="cake-price">
+                        ₹449
+                    </span>
+
+                    <br>
+
+                    <a href="contact.html" class="cake-btn">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= OCCASIONS ================= -->
+
+        <section class="occasions">
+
+            <h2>Cakes For Every Occasion</h2>
+
+
+            <div class="occasion-container">
+
+
+                <div class="occasion">
+
+                    <i class="fas fa-cake-candles"></i>
+
+                    <h3>Birthdays</h3>
+
+                    <p>
+                        Make birthdays extra special with
+                        beautiful customized cakes.
+                    </p>
+
+                </div>
+
+
+                <div class="occasion">
+
+                    <i class="fas fa-ring"></i>
+
+                    <h3>Weddings</h3>
+
+                    <p>
+                        Elegant wedding cakes designed
+                        specially for your big day.
+                    </p>
+
+                </div>
+
+
+                <div class="occasion">
+
+                    <i class="fas fa-heart"></i>
+
+                    <h3>Anniversaries</h3>
+
+                    <p>
+                        Celebrate love with a delicious
+                        and beautifully decorated cake.
+                    </p>
+
+                </div>
+
+
+                <div class="occasion">
+
+                    <i class="fas fa-gift"></i>
+
+                    <h3>Special Events</h3>
+
+                    <p>
+                        Custom cakes for parties,
+                        celebrations and memorable moments.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CUSTOM CAKE ================= -->
+
+        <section class="custom-cake">
+
+            <h2>Want a Customized Cake?</h2>
+
+            <p>
+                Tell us your favorite flavor, color, design
+                and theme. Our team will create a special
+                cake just for your celebration.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Customize Your Cake
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>Likhitha's Bakery</h2>
+
+        <p>
+            Freshly Baked. Lovingly Made.
+        </p>
+
+
+        <div class="social">
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-youtube"></i>
+
+            <i class="fab fa-whatsapp"></i>
+
+        </div>
+
+
+        <p>
+            © 2026 Likhitha's Bakery | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
